@@ -11,7 +11,7 @@ export default function Home() {
   const { user } = useAuthContext();
   return (
     <div className="">
-      <Ongoing/>
+      <Ongoing />
     </div>
   );
 }

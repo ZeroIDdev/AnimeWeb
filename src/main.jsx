@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <AuthContextProvider>
     <FavContexProvider>
+      <title>TekajeOne</title>
       <div className="bg-[rgb(11,22,34)]">
         <App/>
       </div>
