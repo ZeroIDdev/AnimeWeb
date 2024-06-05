@@ -8,6 +8,7 @@ import { RxCross2 } from "react-icons/rx";
 import useLogout from "../hooks/useLogut";
 import { useState, useRef } from "react";
 import Logo from "../assets/Kuro-Neko.png";
+import { FaRegBookmark } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
 export function Header({ setInputValue }) {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -20,8 +21,11 @@ export function Header({ setInputValue }) {
   const [search, setSearch] = useState("");
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
-      e.preventDefault(); // Prevent the default form submission behavior
+      e.preventDefault(); 
       nav(`/search?q=${search}`);
+      setSearch('')
+      setOpenSearch(false)
+      searchRef.current.value = ''
     }
   };
   const openSearchHandle = () => {
@@ -33,8 +37,8 @@ export function Header({ setInputValue }) {
   return (
     <div className="w-max-full w-full  px-8 h-16 bg-[#152232] sticky -top-1 z-40">
       <div className="flex mx-6 justify-between items-center h-full">
-        <Link to="/" className=" overflow-hidden h-20 w-28 scale-150">
-          <img src={Logo} alt="" className=" scale-125 h-20" />
+        <Link to="/" className=" w-28 scale-150">
+         <h1 className="font-bold">TekajeOne</h1>
         </Link>{" "}
         <div>
           <div className="flex items-center gap-4">
@@ -53,7 +57,11 @@ export function Header({ setInputValue }) {
                 }}
               />
             )}
-            <div>tes</div>
+            <div>
+              <Link to={'/bookmarks'}>
+                <FaRegBookmark size={22} />
+              </Link>
+            </div>
           </div>
           <div
             className={`left-0 focus w-full absolute top-16 flex justify-center items-center pb-3 bg-[#152232] ${

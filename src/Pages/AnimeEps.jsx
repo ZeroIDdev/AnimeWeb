@@ -53,12 +53,12 @@ const AnimeEps = () => {
     
   return (
     <div className="flex flex-col items-center overflow-hidden">
-      {!frameLoad && (
-        <div className="absolute aspect-video lg:w-8/12 right-0 lg:h-[27.2rem] h-[17rem] bg-base-200 skeleton border-none rounded-none"></div>
-      )}
-      <div className="lg:grid grid-cols-3 w-full grid-flow-row auto-rows-min ">
+      <div className="">
         {data ? (
-          <div className=" max-w-[90rem] h-max col-span-2 row-span-5 col-start-2 order-last lg:p-3">
+          <div className="relative ">
+            {!frameLoad && (
+        <div className="absolute aspect-video h-full w-full bg-base-200 skeleton border-none rounded-none"></div>
+      )}
             <iframe
               src={url}
               frameBorder="0"

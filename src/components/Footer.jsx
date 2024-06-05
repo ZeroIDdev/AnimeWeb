@@ -4,13 +4,11 @@ const Footer = () => {
   return (
     <footer className="footer p-10 bg-[#152232] text-neutral-content static bottom-0 mt-14">
       <aside>
-        <div className="overflow-hidden w-48 h-20 flex justify-center items-center px-3">
-          <img src={KuroNeko} alt="Logo" className="w-full scale-150 drop-shadow-xl bg-cover"  />
+        <div className="overflow-hidden h-20 flex justify-center items-center">
+         <h1 className="text-2xl font-bold">TekajeOne</h1>
         </div>
         <p>
           Made with ☕ by Ilham
-          <br />
-          Logo by Agiku Takehuro
         </p>
       </aside>
       <nav>

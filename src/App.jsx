@@ -22,6 +22,7 @@ import OngoingPage from "./Pages/OngoingPage";
 import MoviePage from "./Pages/MoviePage";
 import CompletePage from "./Pages/CompletePage";
 import GenrePage from "./Pages/GenrePage";
+import Bookmark from "./Pages/Bookmark";
 export default function App() {
   const { user } = useAuthContext();
   
@@ -52,6 +53,7 @@ export default function App() {
         <Route path="/movie" element={<MoviePage />} />
         <Route path="/complete" element={<CompletePage />} />
         <Route path="/genre/:genreSlug" element={<GenrePage />} />
+        <Route path="/bookmarks" element={<Bookmark />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
       <Footer/>

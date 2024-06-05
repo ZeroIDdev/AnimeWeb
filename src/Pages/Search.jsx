@@ -11,7 +11,6 @@ import Skelton from "../components/Skelton";
 import { debounce } from "lodash";
 import useScroll from "../hooks/useScroll";
 import { api } from "../utils";
-
 const Search = () => {
   const [max, setMax] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -26,15 +25,14 @@ const Search = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const response = await fetch(
-        `${api}/search/${search}`
-      );
+      const response = await fetch(`${api}/search/${search}`);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
       const json = await response.json();
       if (json.data.length > 0) {
-          setResult(json.data);
+        console.log(json.data);
+        setResult(json.data);
       } else {
         console.log("No results found");
       }
@@ -51,13 +49,12 @@ const Search = () => {
   }, 500);
 
   useEffect(() => {
-    const searchTerm = search || 'naruto'; // Default value if search is null or undefined
+    const searchTerm = search || "naruto"; // Default value if search is null or undefined
     setResult([]);
     setPage(1);
     setLoading(true);
     debouncedSearch(searchTerm);
   }, [search]);
-
 
   return (
     <div className="">
@@ -66,13 +63,16 @@ const Search = () => {
           <h1 className="font-bold text-2xl mt-5">Search</h1>
         </div>
         <div className="flex flex-col items-end">
-          <div className={`grid grid-cols-3 gap-5 lg:gap-12 sm:grid-cols-4 md:grid-cols-5 auto-cols-fr grid-flow-row`}>
+          <div
+            className={`grid grid-cols-3 gap-5 lg:gap-12 sm:grid-cols-4 md:grid-cols-5 auto-cols-fr grid-flow-row`}
+          >
             {result.map((e, index) => (
               <Card data={e} key={index} />
             ))}
-            {loading && array.map((e, i) => (
-              <SkeletonCard key={e} />
-            ))}
+            {loading &&
+              array.map((e, i) => {
+                return <SkeletonCard key={i}/>
+              })}
           </div>
         </div>
       </div>
