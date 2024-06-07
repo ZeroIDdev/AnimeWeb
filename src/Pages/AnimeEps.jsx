@@ -68,15 +68,15 @@ const AnimeEps = () => {
             <h1 className="text-2xl">{data.episode}</h1>
           </div>
         )}
-        <div className=" col-span-1 col-start-1 row-span-3 row-start-2">
+        <div className="w-screen flex flex-col items-center">
           <h1 className="w-full px-5 text-base pt-4 lg:ml-7">episodes : </h1>
-          <div className="flex gap-2 px-5 md:px-8 lg:px-12 overflow-x-auto h-auto lg:max-h-96 w-full no-scrollbar pt-3 lg:overflow-y-auto max-w-[40rem] pb-7 mb-14">
+          <div className="flex gap-2 px-5 md:px-8 lg:px-12 overflow-x-scroll h-auto lg:max-h-96  no-scrollbar pt-3 lg:overflow-y-auto max-w-[80rem] pb-7 mb-14">
             {newArray.map((e, i) => {
               console.log(i);
               return (
                 <div
                   key={i}
-                  className={`bg-base-100  font-medium aspect-square text-center flex items-center justify-center rounded-lg w-full`}
+                  className={`bg-aksen  font-medium aspect-square px-3 text-center flex items-center justify-center rounded-lg`}
                 >
                   <Link
                     className=""
