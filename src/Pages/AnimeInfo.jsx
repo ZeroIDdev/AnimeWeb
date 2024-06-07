@@ -99,7 +99,7 @@ const AnimeInfo = () => {
               {eps &&
                 eps.map((e,i) => {
                   return (
-                    <Link to={`/anime/eps/${e.slug}?tt=${eps.length}`} key={e.slug}>
+                    <Link to={`/anime/eps/${slug}/${i+1}?tt=${eps.length}`} key={e.slug}>
                     <div
                       className="group w-80 bg-base-100 p-5 border lg:w-40 rounded-lg hover:text-aksen "
                       

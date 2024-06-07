@@ -8,7 +8,7 @@ const Footer = () => {
          <h1 className="text-2xl font-bold">TekajeOne</h1>
         </div>
         <p>
-          Made with ☕ by Ilham
+          Made with ☕ by XI TKJ 1 SMKN 5 GOWA
         </p>
       </aside>
       <nav>
