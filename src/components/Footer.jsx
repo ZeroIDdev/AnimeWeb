@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <footer className="footer p-10 bg-[#152232] text-neutral-content static bottom-0 mt-14">
       <aside>
-        <div className=" h-40 relative -top-24  flex justify-center items-center">
-         <img src={Tekajone} alt="" />
+        <div className=" h-40 relative -top-24  flex justify-center items-center md:h-44 overflow-y-hidden">
+         <img src={Tekajone} alt="" className="w-full h-[200%]"/>
         </div>
-        <p className="-mt-24 text-center">
+        <p className="-mt-24 md:-mt-24 ml-11 text-center">
           Made with ❤ by XI TKJ 1 SMKN 5 GOWA
         </p>
       </aside>
