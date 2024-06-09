@@ -1,17 +1,17 @@
 import React from "react";
-import KuroNeko from "../assets/Kuro-Neko.png";
+import Tekajone from "../assets/Tekajone.png";
 const Footer = () => {
   return (
     <footer className="footer p-10 bg-[#152232] text-neutral-content static bottom-0 mt-14">
       <aside>
-        <div className="overflow-hidden h-20 flex justify-center items-center">
-         <h1 className="text-2xl font-bold">TekajeOne</h1>
+        <div className=" h-40 relative -top-24  flex justify-center items-center">
+         <img src={Tekajone} alt="" />
         </div>
-        <p>
-          Made with ☕ by XI TKJ 1 SMKN 5 GOWA
+        <p className="-mt-24 text-center">
+          Made with ❤ by XI TKJ 1 SMKN 5 GOWA
         </p>
       </aside>
-      <nav>
+      {/* <nav>
         <header className="footer-title">Social</header>
         <div className="grid grid-flow-col gap-4">
           <svg
@@ -42,7 +42,7 @@ const Footer = () => {
             <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
           </svg>
         </div>
-      </nav>
+      </nav> */}      
     </footer>
   );
 };

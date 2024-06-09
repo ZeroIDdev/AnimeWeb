@@ -31,16 +31,11 @@ const AnimeInfo = () => {
   }, [slug]);
 
   return (
-    <div>
-      {/* {Ecchi && (
-        <div>
-          <h1 className=" text-3xl h-screen">Opps Anime ini tidak tersedia</h1>
-        </div>
-      )} */}
+    <div className="overflow-x-hidden">
       <div>
         {!data && (
           <div className="">
-            <div className="skeleton w-44 aspect-square"></div>
+            <div className="skeleton w-full h-full"></div>
           </div>
         )}
         {data && !Ecchi && (
@@ -54,7 +49,7 @@ const AnimeInfo = () => {
               />
               <div className="lg:mt-16 mt-8 text-center lg:text-start col-start-2 row-start-1 col-span-3 lg:pr-10 mx-5 flex-col flex">
                 <h1 className="text-2xl mb-3">{data.title}</h1>
-                <div className="flex gap-3 mt-3">
+                <div className="flex gap-3 mt-3 max-w-sm flex-wrap md:max-w-7xl">
                   {data.genres.map((e, index) => (
                     <button key={`${e}-${index}`} className="">
                       <Link

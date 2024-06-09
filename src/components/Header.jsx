@@ -8,6 +8,7 @@ import { RxCross2 } from "react-icons/rx";
 import useLogout from "../hooks/useLogut";
 import { useState, useRef } from "react";
 import Logo from "../assets/Kuro-Neko.png";
+import Tekajone from "../assets/Tekajone.png"
 import { FaRegBookmark } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
 export function Header({ setInputValue }) {
@@ -36,9 +37,10 @@ export function Header({ setInputValue }) {
   };
   return (
     <div className="w-max-full w-full  px-8 h-16 bg-[#152232] sticky -top-1 z-40">
-      <div className="flex mx-6 justify-between items-center h-full">
-        <Link to="/" className=" w-28 scale-150">
-         <h1 className="font-bold">TekajeOne</h1>
+      <div className="flex justify-between items-center h-full">
+
+        <Link to="/" className=" w-44 relative -top-4">
+         <img src={Tekajone} alt="" className="w-full h-full" />
         </Link>{" "}
         <div>
           <div className="flex items-center gap-4">
@@ -57,11 +59,6 @@ export function Header({ setInputValue }) {
                 }}
               />
             )}
-            <div>
-              <Link to={'/bookmarks'}>
-                <FaRegBookmark size={22} />
-              </Link>
-            </div>
           </div>
           <div
             className={`left-0 focus w-full absolute top-16 flex justify-center items-center pb-3 bg-[#152232] ${
